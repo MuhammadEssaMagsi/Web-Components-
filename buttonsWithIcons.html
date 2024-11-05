@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Modern Button Collection</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    /* General Styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: #f0f2f5;
+}
+
+.button-collection {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.btn {
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+  min-width: 160px;
+  color: white;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.btn i {
+  transition: transform 0.3s ease;
+}
+
+/* Fill Button */
+.btn-fill {
+  background-color: #3498db;
+}
+.btn-fill:hover {
+  background-color: #2980b9;
+  transform: scale(1.05);
+}
+
+/* Outline Button */
+.btn-outline {
+  background-color: transparent;
+  border: 2px solid #3498db;
+  color: #3498db;
+}
+.btn-outline:hover {
+  background-color: #3498db;
+  color: white;
+  transform: translateX(5px);
+}
+
+/* 3D Button */
+.btn-3d {
+  background-color: #e74c3c;
+  box-shadow: 0 6px #c0392b;
+}
+.btn-3d:active {
+  box-shadow: 0 2px #c0392b;
+  transform: translateY(4px);
+}
+.btn-3d:hover i {
+  transform: rotate(20deg);
+}
+
+/* Slide Button */
+.btn-slide {
+  position: relative;
+  overflow: hidden;
+  background-color: #2ecc71;
+}
+.btn-slide::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background-color: #27ae60;
+  transition: all 0.3s ease;
+}
+.btn-slide:hover::before {
+  left: 0;
+}
+.btn-slide:hover i {
+  transform: translateX(5px);
+}
+
+/* Gradient Button */
+.btn-gradient {
+  background: linear-gradient(45deg, #6a11cb, #2575fc);
+}
+.btn-gradient:hover {
+  background: linear-gradient(45deg, #2575fc, #6a11cb);
+  transform: scale(1.05);
+}
+.btn-gradient:hover i {
+  transform: rotate(-20deg);
+}
+
+/* Shadow Button */
+.btn-shadow {
+  background-color: #9b59b6;
+  box-shadow: 0 4px 15px rgba(155, 89, 182, 0.4);
+}
+.btn-shadow:hover {
+  box-shadow: 0 6px 20px rgba(155, 89, 182, 0.6);
+  transform: scale(1.05);
+}
+
+/* Neon Button */
+.btn-neon {
+  background-color: #000;
+  color: #0f0;
+  border: 2px solid #0f0;
+  text-shadow: 0 0 5px #0f0, 0 0 10px #0f0, 0 0 15px #0f0;
+}
+.btn-neon:hover {
+  color: #fff;
+  background-color: #0f0;
+  text-shadow: 0 0 10px #fff, 0 0 20px #fff;
+}
+
+/* Ripple Button */
+.btn-ripple {
+  position: relative;
+  background-color: #e67e22;
+  overflow: hidden;
+}
+.btn-ripple::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  transform: scale(0);
+  opacity: 0;
+  transition: transform 0.6s ease, opacity 0.6s;
+}
+.btn-ripple:active::after {
+  transform: scale(2.5);
+  opacity: 1;
+}
+
+/* Rotate Button */
+.btn-rotate {
+  background-color: #1abc9c;
+}
+.btn-rotate:hover i {
+  transform: rotate(360deg);
+}
+
+/* Glow Button */
+.btn-glow {
+  background-color: #8e44ad;
+  box-shadow: 0 0 10px rgba(142, 68, 173, 0.6);
+}
+.btn-glow:hover {
+  box-shadow: 0 0 20px rgba(142, 68, 173, 1);
+  transform: scale(1.1);
+}
+
+  </style>
+</head>
+<body>
+  <div class="button-collection">
+    <button class="btn btn-fill"><i class="fas fa-check"></i> Fill Button</button>
+    <button class="btn btn-outline"><i class="fas fa-arrow-right"></i> Outline Button</button>
+    <button class="btn btn-3d"><i class="fas fa-cube"></i> 3D Button</button>
+    <button class="btn btn-slide"><i class="fas fa-chevron-right"></i> Slide Button</button>
+    <button class="btn btn-gradient"><i class="fas fa-palette"></i> Gradient Button</button>
+    <button class="btn btn-shadow"><i class="fas fa-magic"></i> Shadow Button</button>
+    <button class="btn btn-neon"><i class="fas fa-bolt"></i> Neon Button</button>
+    <button class="btn btn-ripple"><i class="fas fa-water"></i> Ripple Button</button>
+    <button class="btn btn-rotate"><i class="fas fa-sync"></i> Rotate Button</button>
+    <button class="btn btn-glow"><i class="fas fa-sun"></i> Glow Button</button>
+  </div>
+</body>
+</html>

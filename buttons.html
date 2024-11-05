@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Modern Button Collection</title>
+  <style>
+    /* General Styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: #f0f2f5;
+}
+
+.button-collection {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.btn {
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+  min-width: 150px;
+  color: white;
+}
+
+/* Fill Button */
+.btn-fill {
+  background-color: #3498db;
+}
+.btn-fill:hover {
+  background-color: #2980b9;
+}
+
+/* Outline Button */
+.btn-outline {
+  background-color: transparent;
+  border: 2px solid #3498db;
+  color: #3498db;
+}
+.btn-outline:hover {
+  background-color: #3498db;
+  color: white;
+}
+
+/* 3D Button */
+.btn-3d {
+  background-color: #e74c3c;
+  box-shadow: 0 6px #c0392b;
+}
+.btn-3d:active {
+  box-shadow: 0 2px #c0392b;
+  transform: translateY(4px);
+}
+
+/* Slide Button */
+.btn-slide {
+  position: relative;
+  overflow: hidden;
+  background-color: #2ecc71;
+}
+.btn-slide::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background-color: #27ae60;
+  transition: all 0.3s ease;
+}
+.btn-slide:hover::before {
+  left: 0;
+}
+.btn-slide:hover {
+  color: white;
+}
+
+/* Gradient Button */
+.btn-gradient {
+  background: linear-gradient(45deg, #6a11cb, #2575fc);
+}
+.btn-gradient:hover {
+  background: linear-gradient(45deg, #2575fc, #6a11cb);
+}
+
+/* Shadow Button */
+.btn-shadow {
+  background-color: #9b59b6;
+  box-shadow: 0 4px 15px rgba(155, 89, 182, 0.4);
+}
+.btn-shadow:hover {
+  box-shadow: 0 6px 20px rgba(155, 89, 182, 0.6);
+}
+
+/* Neon Button */
+.btn-neon {
+  background-color: #000;
+  color: #0f0;
+  border: 2px solid #0f0;
+  text-shadow: 0 0 5px #0f0, 0 0 10px #0f0, 0 0 15px #0f0;
+}
+.btn-neon:hover {
+  color: #fff;
+  background-color: #0f0;
+  text-shadow: 0 0 10px #fff, 0 0 20px #fff;
+}
+
+  </style>
+</head>
+<body>
+  <div class="button-collection">
+    <button class="btn btn-fill">Fill Button</button>
+    <button class="btn btn-outline">Outline Button</button>
+    <button class="btn btn-3d">3D Button</button>
+    <button class="btn btn-slide">Slide Button</button>
+    <button class="btn btn-gradient">Gradient Button</button>
+    <button class="btn btn-shadow">Shadow Button</button>
+    <button class="btn btn-neon">Neon Button</button>
+  </div>
+</body>
+</html>
