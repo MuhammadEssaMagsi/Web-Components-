@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Modern Button Collection</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    /* General Styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: #e0e5ec;
+}
+
+.button-collection {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.btn {
+  padding: 12px 25px;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 30px;
+  color: #555;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: all 0.3s ease;
+}
+
+.btn i {
+  font-size: 1.2em;
+  transition: transform 0.3s ease;
+}
+
+/* Neumorphic Button */
+.btn-neumorphic {
+  background: #e0e5ec;
+  box-shadow: 6px 6px 12px #c5c9cf, -6px -6px 12px #ffffff;
+}
+
+.btn-neumorphic:hover {
+  box-shadow: inset 4px 4px 8px #c5c9cf, inset -4px -4px 8px #ffffff;
+  transform: scale(1.05);
+}
+
+.btn-neumorphic:active {
+  box-shadow: inset 6px 6px 12px #c5c9cf, inset -6px -6px 12px #ffffff;
+  transform: scale(0.98);
+}
+
+/* Icon Movement on Hover */
+.btn-neumorphic:hover i {
+  transform: translateX(3px);
+}
+
+/* Neumorphic Button with Text Glow */
+.btn-neumorphic-glow {
+  background: #e0e5ec;
+  box-shadow: 6px 6px 12px #c5c9cf, -6px -6px 12px #ffffff;
+}
+.btn-neumorphic-glow:hover {
+  box-shadow: inset 4px 4px 8px #c5c9cf, inset -4px -4px 8px #ffffff;
+  color: #3498db;
+  text-shadow: 0 0 8px rgba(52, 152, 219, 0.7);
+}
+
+/* Neumorphic Button with Ripple Effect */
+.btn-neumorphic-ripple {
+  position: relative;
+  overflow: hidden;
+  background: #e0e5ec;
+  box-shadow: 6px 6px 12px #c5c9cf, -6px -6px 12px #ffffff;
+}
+
+.btn-neumorphic-ripple::after {
+  content: "";
+  position: absolute;
+  width: 300%;
+  height: 300%;
+  top: 50%;
+  left: 50%;
+  background: rgba(52, 152, 219, 0.2);
+  border-radius: 50%;
+  transition: transform 0.6s, opacity 0.6s;
+  transform: translate(-50%, -50%) scale(0);
+  opacity: 0;
+}
+
+.btn-neumorphic-ripple:active::after {
+  transform: translate(-50%, -50%) scale(1);
+  opacity: 1;
+}
+
+/* Neumorphic Button with Icon Rotate */
+.btn-neumorphic-rotate {
+  background: #e0e5ec;
+  box-shadow: 6px 6px 12px #c5c9cf, -6px -6px 12px #ffffff;
+}
+.btn-neumorphic-rotate:hover i {
+  transform: rotate(20deg);
+}
+.btn-neumorphic-rotate:active {
+  box-shadow: inset 6px 6px 12px #c5c9cf, inset -6px -6px 12px #ffffff;
+}
+
+  </style>
+</head>
+<body>
+  <div class="button-collection">
+    <button class="btn btn-neumorphic"><i class="fas fa-play"></i> Play</button>
+    <button class="btn btn-neumorphic"><i class="fas fa-pause"></i> Pause</button>
+    <button class="btn btn-neumorphic"><i class="fas fa-heart"></i> Like</button>
+    <button class="btn btn-neumorphic"><i class="fas fa-download"></i> Download</button>
+    <button class="btn btn-neumorphic"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
+    <button class="btn btn-neumorphic"><i class="fas fa-search"></i> Search</button>
+    <button class="btn btn-neumorphic"><i class="fas fa-envelope"></i> Message</button>
+  </div>
+</body>
+</html>
